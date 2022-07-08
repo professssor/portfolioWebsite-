@@ -13,6 +13,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* for home page  */
 .container {
   padding: 1rem;
   width: 100%;
@@ -173,16 +174,24 @@ button > a {
 /* **********************************************************code for projects.html ***********************/
 
 .projects-heading {
-  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
   text-align: center;
   padding: 4rem;
   color: #ffb562;
 }
-.projects-heading > h1:hover {
-  transform: scale(200%);
-  transition: all ease-in-out;
-  transition-duration: 600ms;
+.projects-heading > img {
+  height: 17rem;
+  width: 17rem;
 }
+.projects-heading > h1 {
+  color: rgb(70, 110, 232);
+  font-size: 1.8rem;
+}
+
 .project-container {
   background-color: #efefef;
   padding: 2rem;
@@ -224,8 +233,20 @@ button > a {
 
 /* ******** blogpage styles********************************************* */
 
+.blog-image {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.blog-image > img {
+  margin-top: 2rem;
+  height: 15rem;
+  width: 15rem;
+}
+
 .blog-heading {
-  margin: 4rem;
+  margin-top: 1rem;
   text-align: center;
   padding: 4rem;
   color: #ffb562;
@@ -234,11 +255,6 @@ button > a {
 
 #hashnode-heading {
   color: gray;
-}
-.blog-heading:hover {
-  transform: scale(150%);
-  transition: all ease-in-out;
-  transition-duration: 600ms;
 }
 
 .blog-container {
@@ -268,4 +284,34 @@ button > a {
   background-color: #ffb562;
   transition: all ease-in-out;
   transition-duration: 400ms;
+}
+
+/* for making the website responsive */
+
+@media (min-width: 640px) {
+  .project-container,
+  .parent-container,
+  .blog-container {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .blog-heading:hover {
+    transform: scale(120%);
+    transition: all ease-in-out;
+    transition-duration: 600ms;
+  }
+  .projects-heading > h1:hover {
+    transform: scale(200%);
+    transition: all ease-in-out;
+    transition-duration: 600ms;
+  }
+  #projects,
+  #home,
+  #blog {
+    width: 25rem;
+    height: 25rem;
+  }
 }
