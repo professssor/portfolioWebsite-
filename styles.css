@@ -9,11 +9,12 @@ body {
   background-color: white;
   width: 100vw;
 }
+/* to make the scrollbar disappear without losing the functionality */
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* for home page  */
+/* for home page ******************************* */
 .container {
   padding: 1rem;
   width: 100%;
